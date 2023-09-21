@@ -13,7 +13,7 @@ app.use(cors());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-server-uviq.onrender.com",
+    origins: "https://chat-server-uviq.onrender.com",
     methods: ["GET", "POST"],
   },
 });
