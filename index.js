@@ -1,20 +1,20 @@
-const express = require("express");
+// const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
-const cors = require("cors");
-const route = require("./route");
+// const cors = require("cors");
+// const route = require("./route");
 const { addUser, getRoomUsers, removeUser } = require("./users");
 
-const app = express();
+// const app = express();
 
-app.use(cors({ origin: "*" }));
-app.use(route);
+// app.use(cors());
+// app.use(route);
 
-const server = http.createServer(app);
+const server = http.createServer();
 const io = new Server(server, {
   cors: {
-    origin: "*",
-    methods: ["GET", "POST"],
+    origin: "https://chat-itsownkot.vercel.app/",
+    // methods: ["GET", "POST"],
   },
 });
 
