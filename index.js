@@ -1,16 +1,16 @@
-// const express = require("express");
+const express = require("express");
 const http = require("http");
 const { Server } = require("socket.io");
-// const cors = require("cors");
+const cors = require("cors");
 // const route = require("./route");
 const { addUser, getRoomUsers, removeUser } = require("./users");
 
-// const app = express();
+const app = express();
 
-// app.use(cors());
+app.use(cors());
 // app.use(route);
 
-const server = http.createServer();
+const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
     origin: "https://chat-server-uviq.onrender.com",
