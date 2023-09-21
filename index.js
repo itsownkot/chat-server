@@ -13,8 +13,8 @@ const { addUser, getRoomUsers, removeUser } = require("./users");
 const server = http.createServer();
 const io = new Server(server, {
   cors: {
-    origin: "https://chat-itsownkot.vercel.app/",
-    // methods: ["GET", "POST"],
+    origin: "https://chat-server-uviq.onrender.com",
+    methods: ["GET", "POST"],
   },
 });
 
